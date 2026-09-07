@@ -1,10 +1,37 @@
-import React from "react";
-import { Phone, Mail, MapPin, Clock, CalendarCheck, CheckCircle2 } from "lucide-react";
+import React, { useState, useEffect } from "react";
+import { Phone, Mail, MapPin, Clock, CalendarCheck, CheckCircle2, MapPinned } from "lucide-react";
 import { MaskedHeading, StaggerReveal } from "./Reveal";
 import { clinic, godziny, umowWizyte } from "../data/clinicData";
 
 export default function ContactSection() {
   const mapQuery = encodeURIComponent(clinic.ulica + " " + clinic.kod);
+
+  // Mapa Google to usluga trzeciej strony i zapisuje wlasne cookies - laduje
+  // sie tylko po zgodzie na "wszystkie" cookies (z bannera lub ponizszego przycisku).
+  const [mapConsent, setMapConsent] = useState(false);
+
+  useEffect(() => {
+    const readConsent = () => {
+      try {
+        setMapConsent(localStorage.getItem("byrska_cookie_consent") === "all");
+      } catch {
+        setMapConsent(false);
+      }
+    };
+    readConsent();
+    window.addEventListener("byrska-cookie-consent", readConsent);
+    return () => window.removeEventListener("byrska-cookie-consent", readConsent);
+  }, []);
+
+  const acceptMapCookies = () => {
+    try {
+      localStorage.setItem("byrska_cookie_consent", "all");
+    } catch {
+      // ignore
+    }
+    setMapConsent(true);
+    window.dispatchEvent(new CustomEvent("byrska-cookie-consent"));
+  };
 
   return (
     <section id="kontakt" className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#FAF8F8]">
@@ -164,15 +191,33 @@ export default function ContactSection() {
           </a>
         </div>
 
-        {/* Interaktywna mapa dojazdu */}
+        {/* Interaktywna mapa dojazdu - laduje sie dopiero po zgodzie na cookies */}
         <div className="mt-4 rounded-3xl overflow-hidden border border-[#842126]/[0.14] bg-[#EDE4E6] shadow-sm">
-          <iframe
-            title="Mapa dojazdu ByrskaDentic Szczecin"
-            src={"https://www.google.com/maps?q=" + mapQuery + "&output=embed"}
-            className="w-full h-[360px] sm:h-[420px] border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
+          {mapConsent ? (
+            <iframe
+              title="Mapa dojazdu ByrskaDentic Szczecin"
+              src={"https://www.google.com/maps?q=" + mapQuery + "&output=embed"}
+              className="w-full h-[360px] sm:h-[420px] border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          ) : (
+            <div className="w-full h-[280px] sm:h-[420px] flex flex-col items-center justify-center gap-3 text-center px-6">
+              <div className="w-11 h-11 rounded-2xl bg-white text-[#842126] flex items-center justify-center shadow-sm">
+                <MapPinned className="w-5 h-5" strokeWidth={1.5} />
+              </div>
+              <p className="text-xs sm:text-sm text-[#221316]/70 max-w-sm">
+                Mapa Google zapisuje własne pliki cookie, dlatego ładuje się dopiero po Twojej zgodzie.
+              </p>
+              <button
+                type="button"
+                onClick={acceptMapCookies}
+                className="px-5 py-2.5 rounded-full bg-[#842126] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#9E2930] transition-colors shadow-sm cursor-pointer"
+              >
+                Pokaż mapę
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </section>

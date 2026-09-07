@@ -23,6 +23,9 @@ export default function CookieConsent() {
     } catch {
       // ignore
     }
+    // Powiadamia inne komponenty (np. mape Google w ContactSection) o zmianie
+    // zgody bez przeladowania strony.
+    window.dispatchEvent(new CustomEvent("byrska-cookie-consent"));
     setIsVisible(false);
   };
 
