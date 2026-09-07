@@ -4,16 +4,13 @@ import { MaskedHeading } from "./Reveal";
 import { cennik } from "../data/clinicData";
 
 export default function PricingSection() {
-  const [openItems, setOpenItems] = useState({ 0: true });
+  const [openIndex, setOpenIndex] = useState(0);
   const itemRefs = useRef([]);
 
   const toggleItem = (e, index) => {
     e.preventDefault();
-    const willOpen = !openItems[index];
-    setOpenItems((prev) => ({
-      ...prev,
-      [index]: willOpen,
-    }));
+    const willOpen = openIndex !== index;
+    setOpenIndex(willOpen ? index : null);
 
     if (willOpen) {
       // Wycentrowanie / zakotwiczenie ekranu na nagłówku
@@ -52,7 +49,7 @@ export default function PricingSection() {
 
         <div className="border-t border-[#842126]/35">
           {cennik.map((g, i) => {
-            const isOpen = Boolean(openItems[i]);
+            const isOpen = openIndex === i;
             return (
               <div
                 key={g.tytul + i}

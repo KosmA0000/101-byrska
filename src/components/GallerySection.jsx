@@ -153,7 +153,6 @@ export default function GallerySection() {
   return (
     <section
       id="galeria"
-      data-lenis-prevent="true"
       className="relative py-14 sm:py-20 md:py-24 bg-[#FAF8F8] border-t border-[#842126]/[0.14] overflow-hidden select-none"
     >
       <div className="w-full">

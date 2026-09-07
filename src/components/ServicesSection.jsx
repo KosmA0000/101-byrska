@@ -98,15 +98,12 @@ const sprzetZdjecia = {
 const ikony = [Stethoscope, Sparkles, Microscope, Baby, Scissors, ShieldCheck, Layers, ScanLine];
 
 function Akordeon({ pozycje, ikonaDomyslna: Domyslna, ikony: lista, zdjeciaMap }) {
-  const [openItems, setOpenItems] = useState({ 0: true });
+  const [openIndex, setOpenIndex] = useState(0);
   const itemRefs = useRef([]);
 
   const toggle = (idx) => {
-    const willOpen = !openItems[idx];
-    setOpenItems((prev) => ({
-      ...prev,
-      [idx]: willOpen,
-    }));
+    const willOpen = openIndex !== idx;
+    setOpenIndex(willOpen ? idx : null);
 
     if (willOpen) {
       // Wycentrowanie / zakotwiczenie ekranu na nagłówku:
@@ -132,7 +129,7 @@ function Akordeon({ pozycje, ikonaDomyslna: Domyslna, ikony: lista, zdjeciaMap }
     <div className="space-y-3.5">
       {pozycje.map((p, idx) => {
         const Ikona = (lista && lista[idx]) || Domyslna;
-        const isOpen = Boolean(openItems[idx]);
+        const isOpen = openIndex === idx;
         const foto = zdjeciaMap && (zdjeciaMap[p.klucz] || zdjeciaMap[p.klucz?.replace(/_+$/, "")]);
         return (
           <div
