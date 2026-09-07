@@ -40,7 +40,6 @@ export default function CookieConsent() {
         <button
           type="button"
           onClick={() => handleConsent("dismissed")}
-          data-cursor-hover
           className="absolute top-4 right-4 w-7 h-7 rounded-full bg-[#FAF8F8] border border-[#842126]/15 text-[#221316]/60 hover:text-[#842126] hover:bg-[#EDE4E6] flex items-center justify-center transition-colors cursor-pointer"
           aria-label="Zamknij informację o cookies"
         >
@@ -68,7 +67,6 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={() => handleConsent("essential")}
-            data-cursor-hover
             className="px-4 py-2 rounded-full border border-[#842126]/30 text-[#221316] hover:bg-[#EDE4E6] text-xs font-medium transition-colors text-center cursor-pointer"
           >
             Tylko niezbędne
@@ -76,7 +74,6 @@ export default function CookieConsent() {
           <button
             type="button"
             onClick={() => handleConsent("all")}
-            data-cursor-hover
             className="px-5 py-2 rounded-full bg-[#842126] hover:bg-[#9E2930] text-white text-xs font-semibold uppercase tracking-wider transition-all shadow-sm hover:shadow-md flex items-center justify-center gap-1.5 text-center cursor-pointer"
           >
             <Check className="w-3.5 h-3.5" strokeWidth={2.5} />

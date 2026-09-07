@@ -1,6 +1,5 @@
 import React from 'react';
 import SmoothScroll from './components/SmoothScroll';
-import CustomCursor from './components/CustomCursor';
 import CookieConsent from './components/CookieConsent';
 import CinematicCameraCanvas from './components/CinematicCameraCanvas';
 import Navbar from './components/Navbar';
@@ -15,7 +14,6 @@ import Footer from './components/Footer';
 export default function App() {
   return (
     <SmoothScroll>
-      <CustomCursor />
       <CookieConsent />
       <CinematicCameraCanvas />
 

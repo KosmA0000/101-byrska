@@ -19,17 +19,6 @@ import gal12 from "../assets/img/gal-12.jpg";
 
 const imgs = [gal01, gal02, gal03, gal04, gal05, gal06, gal07, gal08, gal09, gal10, gal11, gal12];
 
-// Preładowanie zdjęć w przeglądarce
-if (typeof window !== "undefined") {
-  imgs.forEach((src) => {
-    const img = new Image();
-    img.src = src;
-    if (img.decode) {
-      img.decode().catch(() => {});
-    }
-  });
-}
-
 // 3 zestawy po 12 zdjęć dla niekończącego się obrotu koła (Circular Wheel)
 const displayImgs = [...imgs, ...imgs, ...imgs];
 
@@ -166,9 +155,6 @@ export default function GallerySection() {
             <MaskedHeading className="text-3xl sm:text-5xl font-serif font-medium text-[#221316] tracking-tight leading-[1.2] sm:leading-[1.2]">
               Gabinet
             </MaskedHeading>
-            <p className="text-xs sm:text-sm text-[#221316]/65 max-w-md mx-auto">
-              Nawiguj strzałkami lub przesuwaj palcem w nieskończonej pętli kołowej 360°, aby obejrzeć gabinet.
-            </p>
           </div>
 
           {/* Przyciski nawigacji kołowej dostępne na desktopie i mobile */}
@@ -176,7 +162,6 @@ export default function GallerySection() {
             <button
               type="button"
               onClick={() => nudge(-1)}
-              data-cursor-hover
               aria-label="Poprzednie zdjęcie"
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-[#842126]/35 text-[#842126] flex items-center justify-center hover:bg-[#842126] hover:text-white shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 cursor-pointer shrink-0"
             >
@@ -192,7 +177,6 @@ export default function GallerySection() {
             <button
               type="button"
               onClick={() => nudge(1)}
-              data-cursor-hover
               aria-label="Następne zdjęcie"
               className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white border border-[#842126]/35 text-[#842126] flex items-center justify-center hover:bg-[#842126] hover:text-white shadow-sm hover:shadow-md transition-all duration-200 active:scale-95 cursor-pointer shrink-0"
             >
@@ -221,8 +205,10 @@ export default function GallerySection() {
                 <img
                   src={src}
                   alt={`Gabinet ByrskaDentic ${(i % 12) + 1}`}
-                  loading="eager"
-                  decoding="sync"
+                  // Tylko srodkowy, startowy zestaw (12-23) jest widoczny od razu -
+                  // pozostale dwa zapasowe zestawy karuzeli doladowuja sie leniwie.
+                  loading={i >= 12 && i < 24 ? "eager" : "lazy"}
+                  decoding="async"
                   className="w-full h-[52vw] sm:h-[24vw] md:h-[19vw] max-h-[340px] min-h-[190px] object-cover filter brightness-[0.98] hover:scale-[1.03] transition-transform duration-500 ease-out pointer-events-none"
                 />
               </figure>

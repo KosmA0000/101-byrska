@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 
 const reduced = () =>
@@ -39,6 +39,12 @@ export function useInView(ref, play, deps = []) {
 /** Naglowek wjezdzajacy zza maski. */
 export function MaskedHeading({ children, className = "", as: Tag = "h2" }) {
   const ref = useRef(null);
+  // Stan startowy ustawiony synchronicznie przed pierwszym malowaniem, zeby przy
+  // wjezdzie w viewport nie bylo klatki z pelna widocznoscia przed ukryciem przez IO.
+  useLayoutEffect(() => {
+    if (reduced() || !ref.current) return;
+    gsap.set(ref.current.querySelectorAll(".reveal-line"), { yPercent: 120, opacity: 0, rotateZ: 2 });
+  }, []);
   useInView(ref, (el) =>
     gsap.fromTo(
       el.querySelectorAll(".reveal-line"),
@@ -56,6 +62,10 @@ export function MaskedHeading({ children, className = "", as: Tag = "h2" }) {
 /** Kafelki wstaja kolejno. */
 export function StaggerReveal({ children, className = "", y = 34, stagger = 0.07 }) {
   const ref = useRef(null);
+  useLayoutEffect(() => {
+    if (reduced() || !ref.current) return;
+    gsap.set(ref.current.children, { y, opacity: 0 });
+  }, [y]);
   useInView(
     ref,
     (el) =>
@@ -86,6 +96,11 @@ export function StaggerReveal({ children, className = "", y = 34, stagger = 0.07
 export function CurtainImageReveal({ src, alt = "", className = "", imgClassName = "" }) {
   const box = useRef(null);
   const img = useRef(null);
+  useLayoutEffect(() => {
+    if (reduced() || !box.current) return;
+    gsap.set(box.current, { clipPath: "polygon(0 100%, 100% 100%, 100% 100%, 0 100%)" });
+    if (img.current) gsap.set(img.current, { scale: 1.25 });
+  }, []);
   useInView(box, (el) => {
     gsap.fromTo(
       el,
@@ -105,6 +120,10 @@ export function CurtainImageReveal({ src, alt = "", className = "", imgClassName
 /** Miekkie wejscie pojedynczego bloku. */
 export function FadeUp({ children, className = "", delay = 0 }) {
   const ref = useRef(null);
+  useLayoutEffect(() => {
+    if (reduced() || !ref.current) return;
+    gsap.set(ref.current, { y: 26, opacity: 0 });
+  }, []);
   useInView(
     ref,
     (el) =>

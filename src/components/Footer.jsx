@@ -7,7 +7,7 @@ export default function Footer() {
       <div className="max-w-5xl mx-auto">
         <nav className="flex flex-wrap gap-x-7 gap-y-3 pb-8 border-b border-[#842126]/20">
           {nav.map((item) => (
-            <a key={item.href} href={item.href} data-cursor-hover
+            <a key={item.href} href={item.href}
                className="text-xs uppercase tracking-[0.15em] text-[#221316]/65 hover:text-[#842126] transition-colors">
               {item.label}
             </a>

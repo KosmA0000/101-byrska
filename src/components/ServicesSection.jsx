@@ -152,7 +152,6 @@ function Akordeon({ pozycje, ikonaDomyslna: Domyslna, ikony: lista, zdjeciaMap }
           >
             <button
               ref={(el) => (btnRefs.current[idx] = el)}
-              data-cursor-hover
               onClick={() => toggle(idx)}
               aria-expanded={isOpen}
               className="w-full p-4 sm:p-6 text-left flex items-center justify-between gap-4 cursor-pointer"

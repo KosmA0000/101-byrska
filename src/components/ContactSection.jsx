@@ -40,7 +40,6 @@ export default function ContactSection() {
               <div className="space-y-2.5">
                 <a
                   href={clinic.telefonHref}
-                  data-cursor-hover
                   className="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.08] border border-white/10 hover:border-[#E08D93] hover:bg-white/[0.14] transition-all group"
                 >
                   <span className="text-xs text-[#FAF8F8]/80">Telefon stacjonarny:</span>
@@ -51,7 +50,6 @@ export default function ContactSection() {
 
                 <a
                   href={clinic.komorkaHref}
-                  data-cursor-hover
                   className="flex items-center justify-between gap-3 p-3.5 rounded-2xl bg-white/[0.08] border border-white/10 hover:border-[#E08D93] hover:bg-white/[0.14] transition-all group"
                 >
                   <span className="text-xs text-[#FAF8F8]/80">Telefon komórkowy:</span>
@@ -109,7 +107,6 @@ export default function ContactSection() {
               <div className="mt-4 space-y-2">
                 <a
                   href={"mailto:" + clinic.email}
-                  data-cursor-hover
                   className="block p-3 rounded-2xl bg-[#FAF8F8] border border-[#221316]/10 hover:border-[#842126] transition-colors"
                 >
                   <span className="block text-[10px] uppercase font-bold text-[#842126]">
@@ -123,7 +120,6 @@ export default function ContactSection() {
                 {clinic.emailGabinet && (
                   <a
                     href={"mailto:" + clinic.emailGabinet}
-                    data-cursor-hover
                     className="block p-3 rounded-2xl bg-[#FAF8F8] border border-[#221316]/10 hover:border-[#842126] transition-colors"
                   >
                     <span className="block text-[10px] uppercase font-bold text-[#842126]">
@@ -162,7 +158,6 @@ export default function ContactSection() {
             href={"https://www.google.com/maps?q=" + mapQuery}
             target="_blank"
             rel="noopener noreferrer"
-            data-cursor-hover
             className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#842126] text-white text-xs uppercase tracking-wider font-semibold hover:bg-[#9E2930] transition-colors shrink-0 shadow-sm"
           >
             Nawiguj w Google Maps

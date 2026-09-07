@@ -86,7 +86,6 @@ export default function Coverflow({
               <figure
                 key={i}
                 onClick={() => d !== 0 && setActive(i)}
-                data-cursor-hover
                 className={`absolute left-1/2 top-0 h-full overflow-hidden transition-all duration-500 ease-out ${
                   d === 0 ? "" : "cursor-pointer"
                 } ${cardClass}`}
@@ -111,7 +110,6 @@ export default function Coverflow({
         <button
           onClick={() => go(-1)}
           disabled={active === 0}
-          data-cursor-hover
           aria-label="Poprzednie"
           className="w-11 h-11 rounded-full bg-white border border-[#842126]/45 text-[#842126] flex items-center justify-center hover:bg-[#842126] hover:text-white transition-colors disabled:opacity-35 disabled:pointer-events-none"
         >
@@ -123,7 +121,6 @@ export default function Coverflow({
         <button
           onClick={() => go(1)}
           disabled={active === count - 1}
-          data-cursor-hover
           aria-label="Następne"
           className="w-11 h-11 rounded-full bg-white border border-[#842126]/45 text-[#842126] flex items-center justify-center hover:bg-[#842126] hover:text-white transition-colors disabled:opacity-35 disabled:pointer-events-none"
         >

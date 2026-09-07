@@ -19,7 +19,6 @@ export default function Navbar() {
             <a
               key={item.href}
               href={item.href}
-              data-cursor-hover
               className="whitespace-nowrap text-[10px] xl:text-xs uppercase tracking-[0.04em] xl:tracking-[0.12em] text-[#FAF8F8]/80 hover:text-[#E08D93] transition-colors"
             >
               {item.label}
@@ -29,7 +28,6 @@ export default function Navbar() {
 
         <a
           href={clinic.telefonHref}
-          data-cursor-hover
           className="hidden lg:flex flex-nowrap whitespace-nowrap items-center gap-2 border border-[#842126] bg-[#842126]/20 text-[#FAF8F8] text-[10px] xl:text-xs uppercase tracking-[0.04em] xl:tracking-[0.12em] px-3.5 xl:px-4 py-2 rounded-full hover:bg-[#842126] hover:text-white transition-colors shrink-0 shadow-sm"
         >
           <Phone size={14} className="text-[#E08D93]" /> {clinic.telefon}
@@ -37,7 +35,6 @@ export default function Navbar() {
 
         <button
           onClick={() => setOpen(true)}
-          data-cursor-hover
           className="lg:hidden shrink-0 text-[#FAF8F8]"
           aria-label="Otwórz menu"
         >

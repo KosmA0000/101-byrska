@@ -67,7 +67,6 @@ export default function PricingSection() {
                 <button
                   ref={(el) => (btnRefs.current[i] = el)}
                   type="button"
-                  data-cursor-hover
                   onClick={(e) => toggleItem(e, i)}
                   aria-expanded={isOpen}
                   className="w-full flex items-center justify-between gap-6 py-6 text-left group cursor-pointer"
@@ -76,11 +75,6 @@ export default function PricingSection() {
                     <span className="font-serif text-xl sm:text-3xl text-[#FAF8F8] group-hover:text-[#E08D93] transition-colors leading-snug pb-1">
                       {g.tytul}
                     </span>
-                    {g.wiersze.length > 0 && (
-                      <span className="text-[11px] uppercase tracking-wider text-[#E08D93]/75 shrink-0">
-                        {g.wiersze.length} poz.
-                      </span>
-                    )}
                   </span>
                   <Plus
                     className={
