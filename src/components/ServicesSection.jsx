@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import {
   Stethoscope, Sparkles, Microscope, Baby, Scissors, ShieldCheck, Layers, ScanLine,
   ChevronDown, Cpu, Check,
@@ -99,30 +99,9 @@ const ikony = [Stethoscope, Sparkles, Microscope, Baby, Scissors, ShieldCheck, L
 
 function Akordeon({ pozycje, ikonaDomyslna: Domyslna, ikony: lista, zdjeciaMap }) {
   const [openIndex, setOpenIndex] = useState(0);
-  const itemRefs = useRef([]);
 
   const toggle = (idx) => {
-    const willOpen = openIndex !== idx;
-    setOpenIndex(willOpen ? idx : null);
-
-    if (willOpen) {
-      // Wycentrowanie / zakotwiczenie ekranu na nagłówku:
-      // harmonijka rozwija się w dół, a ekran pozostaje stabilnie przy jej nagłówku
-      requestAnimationFrame(() => {
-        const el = itemRefs.current[idx];
-        if (el) {
-          const navbarHeight = 84;
-          const rect = el.getBoundingClientRect();
-          const targetY = window.pageYOffset + rect.top - navbarHeight;
-
-          if (window.__lenis) {
-            window.__lenis.scrollTo(targetY, { duration: 0.45 });
-          } else {
-            window.scrollTo({ top: targetY, behavior: "smooth" });
-          }
-        }
-      });
-    }
+    setOpenIndex(openIndex !== idx ? idx : null);
   };
 
   return (
@@ -134,7 +113,6 @@ function Akordeon({ pozycje, ikonaDomyslna: Domyslna, ikony: lista, zdjeciaMap }
         return (
           <div
             key={p.klucz}
-            ref={(el) => (itemRefs.current[idx] = el)}
             className={
               "rounded-3xl border transition-all duration-300 overflow-hidden bg-white " +
               (isOpen

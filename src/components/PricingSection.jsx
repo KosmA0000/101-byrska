@@ -1,34 +1,14 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import { Plus, ReceiptText } from "lucide-react";
 import { MaskedHeading } from "./Reveal";
 import { cennik } from "../data/clinicData";
 
 export default function PricingSection() {
   const [openIndex, setOpenIndex] = useState(0);
-  const itemRefs = useRef([]);
 
   const toggleItem = (e, index) => {
     e.preventDefault();
-    const willOpen = openIndex !== index;
-    setOpenIndex(willOpen ? index : null);
-
-    if (willOpen) {
-      // Wycentrowanie / zakotwiczenie ekranu na nagłówku
-      requestAnimationFrame(() => {
-        const el = itemRefs.current[index];
-        if (el) {
-          const navbarHeight = 84;
-          const rect = el.getBoundingClientRect();
-          const targetY = window.pageYOffset + rect.top - navbarHeight;
-
-          if (window.__lenis) {
-            window.__lenis.scrollTo(targetY, { duration: 0.45 });
-          } else {
-            window.scrollTo({ top: targetY, behavior: "smooth" });
-          }
-        }
-      });
-    }
+    setOpenIndex(openIndex !== index ? index : null);
   };
 
   return (
@@ -53,7 +33,6 @@ export default function PricingSection() {
             return (
               <div
                 key={g.tytul + i}
-                ref={(el) => (itemRefs.current[i] = el)}
                 className="border-b border-[#842126]/35"
               >
                 <button
