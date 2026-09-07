@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import {
   Stethoscope, Sparkles, Microscope, Baby, Scissors, ShieldCheck, Layers, ScanLine,
   ChevronDown, Cpu, Check,
@@ -98,17 +98,47 @@ const sprzetZdjecia = {
 const ikony = [Stethoscope, Sparkles, Microscope, Baby, Scissors, ShieldCheck, Layers, ScanLine];
 
 function Akordeon({ pozycje, ikonaDomyslna: Domyslna, ikony: lista, zdjeciaMap }) {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [stan, setStan] = useState({ open: 0, instant: null });
+  const btnRefs = useRef([]);
+  const pendingRef = useRef(null);
 
   const toggle = (idx) => {
-    setOpenIndex(openIndex !== idx ? idx : null);
+    const btn = btnRefs.current[idx];
+    pendingRef.current = { idx, beforeTop: btn ? btn.getBoundingClientRect().top : null };
+    setStan((prev) => {
+      if (prev.open === idx) return { open: null, instant: null };
+      // Przełączanie: poprzednio otwarta pozycja zamyka się natychmiast (bez animacji),
+      // aby nie "uciekała" w górę pod otwierającą się pozycją — harmonijka rozwija się tylko w dół.
+      return { open: idx, instant: prev.open !== null ? prev.open : null };
+    });
   };
+
+  // Kompensacja przewinięcia: jeśli zamknięcie poprzedniej pozycji (powyżej klikniętej)
+  // przesunęło klikniętą pozycję, natychmiast korygujemy scroll przed odmalowaniem klatki,
+  // aby nagłówek klikniętej pozycji pozostał w tym samym miejscu na ekranie.
+  useLayoutEffect(() => {
+    const pending = pendingRef.current;
+    pendingRef.current = null;
+    if (!pending || pending.beforeTop == null) return;
+    const btn = btnRefs.current[pending.idx];
+    if (!btn) return;
+    const afterTop = btn.getBoundingClientRect().top;
+    const delta = afterTop - pending.beforeTop;
+    if (delta === 0) return;
+    const lenis = window.__lenis;
+    if (lenis && typeof lenis.scrollTo === "function") {
+      lenis.scrollTo(window.scrollY + delta, { immediate: true, force: true });
+    } else {
+      window.scrollBy(0, delta);
+    }
+  }, [stan]);
 
   return (
     <div className="space-y-3.5">
       {pozycje.map((p, idx) => {
         const Ikona = (lista && lista[idx]) || Domyslna;
-        const isOpen = openIndex === idx;
+        const isOpen = stan.open === idx;
+        const isInstant = stan.instant === idx;
         const foto = zdjeciaMap && (zdjeciaMap[p.klucz] || zdjeciaMap[p.klucz?.replace(/_+$/, "")]);
         return (
           <div
@@ -121,6 +151,7 @@ function Akordeon({ pozycje, ikonaDomyslna: Domyslna, ikony: lista, zdjeciaMap }
             }
           >
             <button
+              ref={(el) => (btnRefs.current[idx] = el)}
               data-cursor-hover
               onClick={() => toggle(idx)}
               aria-expanded={isOpen}
@@ -158,7 +189,8 @@ function Akordeon({ pozycje, ikonaDomyslna: Domyslna, ikony: lista, zdjeciaMap }
 
             <div
               className={
-                "grid transition-[grid-template-rows] duration-350 ease-out " +
+                "grid " +
+                (isInstant ? "" : "transition-[grid-template-rows] duration-350 ease-out ") +
                 (isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]")
               }
               style={{ willChange: "grid-template-rows" }}

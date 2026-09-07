@@ -1,15 +1,43 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useLayoutEffect } from "react";
 import { Plus, ReceiptText } from "lucide-react";
 import { MaskedHeading } from "./Reveal";
 import { cennik } from "../data/clinicData";
 
 export default function PricingSection() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [stan, setStan] = useState({ open: 0, instant: null });
+  const btnRefs = useRef([]);
+  const pendingRef = useRef(null);
 
   const toggleItem = (e, index) => {
     e.preventDefault();
-    setOpenIndex(openIndex !== index ? index : null);
+    const btn = btnRefs.current[index];
+    pendingRef.current = { idx: index, beforeTop: btn ? btn.getBoundingClientRect().top : null };
+    setStan((prev) => {
+      if (prev.open === index) return { open: null, instant: null };
+      // Przełączanie: poprzednio otwarta pozycja zamyka się natychmiast (bez animacji),
+      // aby nie "uciekała" w górę pod otwierającą się pozycją — harmonijka rozwija się tylko w dół.
+      return { open: index, instant: prev.open !== null ? prev.open : null };
+    });
   };
+
+  // Kompensacja przewinięcia: jeśli zamknięcie poprzedniej pozycji (powyżej klikniętej)
+  // przesunęło klikniętą pozycję, natychmiast korygujemy scroll przed odmalowaniem klatki.
+  useLayoutEffect(() => {
+    const pending = pendingRef.current;
+    pendingRef.current = null;
+    if (!pending || pending.beforeTop == null) return;
+    const btn = btnRefs.current[pending.idx];
+    if (!btn) return;
+    const afterTop = btn.getBoundingClientRect().top;
+    const delta = afterTop - pending.beforeTop;
+    if (delta === 0) return;
+    const lenis = window.__lenis;
+    if (lenis && typeof lenis.scrollTo === "function") {
+      lenis.scrollTo(window.scrollY + delta, { immediate: true, force: true });
+    } else {
+      window.scrollBy(0, delta);
+    }
+  }, [stan]);
 
   return (
     <section
@@ -29,13 +57,15 @@ export default function PricingSection() {
 
         <div className="border-t border-[#842126]/35">
           {cennik.map((g, i) => {
-            const isOpen = openIndex === i;
+            const isOpen = stan.open === i;
+            const isInstant = stan.instant === i;
             return (
               <div
                 key={g.tytul + i}
                 className="border-b border-[#842126]/35"
               >
                 <button
+                  ref={(el) => (btnRefs.current[i] = el)}
                   type="button"
                   data-cursor-hover
                   onClick={(e) => toggleItem(e, i)}
@@ -63,7 +93,8 @@ export default function PricingSection() {
 
                 <div
                   className={
-                    "grid transition-[grid-template-rows] duration-350 ease-out " +
+                    "grid " +
+                    (isInstant ? "" : "transition-[grid-template-rows] duration-350 ease-out ") +
                     (isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]")
                   }
                   style={{ willChange: "grid-template-rows" }}
