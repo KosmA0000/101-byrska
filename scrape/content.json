@@ -1,0 +1,613 @@
+{
+  "url": "https://www.byrskadentic.pl/",
+  "title": "Witam na stronie Gabinetu stomatologicznego - ByrskaDentic Szczecin",
+  "meta": {
+    "description": "Serdecznie witamy na stronie internetowej nowoczesnego i ekskluzywnego gabinetu stomatologicznego w Szczecinie na Osiedlu Magnolia Park.",
+    "distribution": "Global",
+    "robots": "Index, Follow",
+    "revisit-after": "3 Days",
+    "google-site-verification": "Lg8Cv-H0GlNdDO_vq2NnOHe54rrLSlt2craFqZ0HQaI"
+  },
+  "headings": [
+    {
+      "level": "H1",
+      "text": "Doświadczenie i nowoczesne rozwiązania"
+    },
+    {
+      "level": "H2",
+      "text": "UMÓW WIZYTĘ"
+    }
+  ],
+  "texts": [
+    {
+      "text": "Ten Serwis Wykorzystuje pliki cookie. Korzystając ze strony wyrażasz zgodę na ich używanie, zgodnie z aktualnymi ustawieniami przeglądarki.",
+      "tag": "div",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(86, 86, 86)",
+      "font": "Arial"
+    },
+    {
+      "text": "x zamknij",
+      "tag": "div",
+      "cls": "",
+      "px": 11,
+      "weight": "400",
+      "color": "rgb(255, 255, 255)",
+      "font": "Arial"
+    },
+    {
+      "text": "STRONA GŁÓWNA",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(232, 215, 216)",
+      "font": "Georgia"
+    },
+    {
+      "text": "O NAS",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(232, 215, 216)",
+      "font": "Georgia"
+    },
+    {
+      "text": "ZAKRES USŁUG",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(232, 215, 216)",
+      "font": "Georgia"
+    },
+    {
+      "text": "Stomatologia estetyczna",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Stomatologia zachowawcza",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Endodoncja",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Stomatologia dziecięca",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Chirurgia stomatologiczna",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Profilaktyka",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Protetyka",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Radiowizjografia",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "WYPOSAŻENIE",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(232, 215, 216)",
+      "font": "Georgia"
+    },
+    {
+      "text": "Unity stomatologiczne KaVo",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "OrisEduco",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "The Wand™ Plus",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "RTG (Radiowizjografia)",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Kamera wewnątrzustna",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Endometr",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(232, 215, 216)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "GALERIA",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(232, 215, 216)",
+      "font": "Georgia"
+    },
+    {
+      "text": "CENNIK",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(232, 215, 216)",
+      "font": "Georgia"
+    },
+    {
+      "text": "KONTAKT",
+      "tag": "a",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(232, 215, 216)",
+      "font": "Georgia"
+    },
+    {
+      "text": "Doświadczenie i nowoczesne rozwiązania",
+      "tag": "h1",
+      "cls": "",
+      "px": 22,
+      "weight": "700",
+      "color": "rgb(132, 33, 38)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Serdecznie witamy na stronie internetowej nowoczesnego i ekskluzywnego gabinetu stomatologicznego w Szczecinie na Osiedlu Magnolia Park. Szanowni Państwo w oparciu o wieloletnie doświadczenie oferujemy bardzo szeroki zakres zabiegów stomatologicznych dla dorosłych i dzieci. Każdy Pacjent otoczony jest profesjonalną opieką, indywidualnym podejściem i najwyższą jakością bezstresowego leczenia.",
+      "tag": "p",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "W naszej praktyce kierujemy się zasadą „profesjonalizm w przyjaznej atmosferze” co skutkuje bardzo dużym zaufaniem jakim darzą nas Pacjenci.",
+      "tag": "p",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Jesteśmy jednym z nielicznych w Polsce gabinetów wyposażonych w sprzęt stomatologiczny renomowanej w świecie firmy KaVo.",
+      "tag": "p",
+      "cls": "",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "UMÓW WIZYTĘ",
+      "tag": "h2",
+      "cls": "",
+      "px": 14,
+      "weight": "700",
+      "color": "rgb(132, 33, 38)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Godziny przyjęć:",
+      "tag": "b",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Pn-Czw-Pt:",
+      "tag": "strong",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "8.30-14.30",
+      "tag": "div",
+      "cls": "contact_main",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Wt-Śr:",
+      "tag": "strong",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "14.30-20.30",
+      "tag": "div",
+      "cls": "contact_main",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Sobota:",
+      "tag": "strong",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Po wcześniejszej rejestracji telefonicznej",
+      "tag": "div",
+      "cls": "contact_main",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Rejestracja telefoniczna:",
+      "tag": "b",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Telefon:",
+      "tag": "div",
+      "cls": "contact_main",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "+ 48 91 439 00 39",
+      "tag": "font",
+      "cls": "numery",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(132, 33, 38)",
+      "font": "Arial"
+    },
+    {
+      "text": "Kom:",
+      "tag": "div",
+      "cls": "contact_main",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "0 501 225 801",
+      "tag": "font",
+      "cls": "numery",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(132, 33, 38)",
+      "font": "Arial"
+    },
+    {
+      "text": "E-mail",
+      "tag": "b",
+      "cls": "",
+      "px": 12,
+      "weight": "700",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Wyślij do nas maila, a my skontaktujemy się z Tobą w ciągu 24h",
+      "tag": "div",
+      "cls": "contact_main",
+      "px": 12,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Copyright © 2009 BYRSKA-DENTIC Wszystkie teksty, rysunki, logotypy, zdjęcia oraz wszystkie inne informacje opublikowane na niniejszych stronach podlegają prawom autorskim gabinetu stomatologicznego BYRSKA-DENTIC. Wszelkie kopiowanie, dystrybucja, elektroniczne przetwarzanie oraz przesyłanie zawartości bez zezwolenia gabinetu stomatologicznego BYRSKA-DENTIC jest niedozwolone.",
+      "tag": "p",
+      "cls": "",
+      "px": 8,
+      "weight": "400",
+      "color": "rgb(0, 0, 0)",
+      "font": "Arial"
+    },
+    {
+      "text": "Osiedle Magnolia Park ul Klonowica 45/A, 71-249 Szczecin |",
+      "tag": "div",
+      "cls": "footer_left",
+      "px": 14,
+      "weight": "400",
+      "color": "rgb(204, 102, 102)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "www.byrskadentic.pl",
+      "tag": "a",
+      "cls": "",
+      "px": 14,
+      "weight": "400",
+      "color": "rgb(204, 102, 102)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "by",
+      "tag": "div",
+      "cls": "footer_right",
+      "px": 14,
+      "weight": "400",
+      "color": "rgb(204, 102, 102)",
+      "font": "Times New Roman"
+    },
+    {
+      "text": "Labmatic",
+      "tag": "a",
+      "cls": "",
+      "px": 14,
+      "weight": "400",
+      "color": "rgb(204, 102, 102)",
+      "font": "Times New Roman"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/gl1.jpg",
+      "kind": "img",
+      "alt": "",
+      "w": 166,
+      "h": 100,
+      "file": "assets/000-gl1.jpg"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/gl2.jpg",
+      "kind": "img",
+      "alt": "",
+      "w": 163,
+      "h": 100,
+      "file": "assets/001-gl2.jpg"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/gl3.jpg",
+      "kind": "img",
+      "alt": "",
+      "w": 161,
+      "h": 98,
+      "file": "assets/002-gl3.jpg"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/ue.jpg",
+      "kind": "img",
+      "alt": "",
+      "w": 955,
+      "h": 64,
+      "file": "assets/003-ue.jpg"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/background.jpg",
+      "kind": "css-bg",
+      "on": "body",
+      "file": "assets/004-background.jpg"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/img/cookie_close_bg.png",
+      "kind": "css-bg",
+      "on": "div",
+      "file": "assets/005-cookie_close_bg.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/menu.jpg",
+      "kind": "css-bg",
+      "on": "div",
+      "file": "assets/006-menu.jpg"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/contact_top.png",
+      "kind": "css-bg",
+      "on": "div",
+      "file": "assets/007-contact_top.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/contact_main.png",
+      "kind": "css-bg",
+      "on": "div",
+      "file": "assets/008-contact_main.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/wyslij_btn.png",
+      "kind": "css-bg",
+      "on": "input",
+      "file": "assets/009-wyslij_btn.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/css/img/frontside/contact_bottom.png",
+      "kind": "css-bg",
+      "on": "div",
+      "file": "assets/010-contact_bottom.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/shadowbox/resources/close.png",
+      "kind": "css-bg",
+      "on": "a",
+      "file": "assets/011-close.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/shadowbox/resources/next.png",
+      "kind": "css-bg",
+      "on": "a",
+      "file": "assets/012-next.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/shadowbox/resources/play.png",
+      "kind": "css-bg",
+      "on": "a",
+      "file": "assets/013-play.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/shadowbox/resources/pause.png",
+      "kind": "css-bg",
+      "on": "a",
+      "file": "assets/014-pause.png"
+    },
+    {
+      "url": "https://www.byrskadentic.pl/files/shadowbox/resources/previous.png",
+      "kind": "css-bg",
+      "on": "a",
+      "file": "assets/015-previous.png"
+    }
+  ],
+  "inlineSvgCount": 0,
+  "inlineSvgSample": [],
+  "links": [
+    "https://www.byrskadentic.pl/#",
+    "https://www.byrskadentic.pl/index.html",
+    "https://www.byrskadentic.pl/artykul/o_nas-69.html",
+    "https://www.byrskadentic.pl/artykul/stomatologia_estetyczna-76.html",
+    "https://www.byrskadentic.pl/artykul/stomatologia_zachowawcza-77.html",
+    "https://www.byrskadentic.pl/artykul/endodoncja-79.html",
+    "https://www.byrskadentic.pl/artykul/stomatologia_dziecieca-78.html",
+    "https://www.byrskadentic.pl/artykul/chirurgia_stomatologiczna-80.html",
+    "https://www.byrskadentic.pl/artykul/profilaktyka-81.html",
+    "https://www.byrskadentic.pl/artykul/protetyka-82.html",
+    "https://www.byrskadentic.pl/artykul/radiowizjografia-83.html",
+    "https://www.byrskadentic.pl/artykul/unity_stomatologiczne_kavo-89.html",
+    "https://www.byrskadentic.pl/artykul/oriseduco-88.html",
+    "https://www.byrskadentic.pl/artykul/the_wand_plus_-87.html",
+    "https://www.byrskadentic.pl/artykul/rtg_radiowizjografia-86.html",
+    "https://www.byrskadentic.pl/artykul/kamera_wewnatrzustna_-85.html",
+    "https://www.byrskadentic.pl/artykul/endometr_-84.html",
+    "https://www.byrskadentic.pl/galeria.html",
+    "https://www.byrskadentic.pl/artykul/cennik-72.html",
+    "https://www.byrskadentic.pl/artykul/kontakt-90.html",
+    "http://labmatic.com/"
+  ],
+  "internalLinks": [
+    "https://www.byrskadentic.pl/#",
+    "https://www.byrskadentic.pl/index.html",
+    "https://www.byrskadentic.pl/artykul/o_nas-69.html",
+    "https://www.byrskadentic.pl/artykul/stomatologia_estetyczna-76.html",
+    "https://www.byrskadentic.pl/artykul/stomatologia_zachowawcza-77.html",
+    "https://www.byrskadentic.pl/artykul/endodoncja-79.html",
+    "https://www.byrskadentic.pl/artykul/stomatologia_dziecieca-78.html",
+    "https://www.byrskadentic.pl/artykul/chirurgia_stomatologiczna-80.html",
+    "https://www.byrskadentic.pl/artykul/profilaktyka-81.html",
+    "https://www.byrskadentic.pl/artykul/protetyka-82.html",
+    "https://www.byrskadentic.pl/artykul/radiowizjografia-83.html",
+    "https://www.byrskadentic.pl/artykul/unity_stomatologiczne_kavo-89.html",
+    "https://www.byrskadentic.pl/artykul/oriseduco-88.html",
+    "https://www.byrskadentic.pl/artykul/the_wand_plus_-87.html",
+    "https://www.byrskadentic.pl/artykul/rtg_radiowizjografia-86.html",
+    "https://www.byrskadentic.pl/artykul/kamera_wewnatrzustna_-85.html",
+    "https://www.byrskadentic.pl/artykul/endometr_-84.html",
+    "https://www.byrskadentic.pl/galeria.html",
+    "https://www.byrskadentic.pl/artykul/cennik-72.html",
+    "https://www.byrskadentic.pl/artykul/kontakt-90.html"
+  ],
+  "fonts": [
+    "Arial",
+    "Georgia",
+    "Times New Roman"
+  ],
+  "colors": [
+    "rgb(86, 86, 86)",
+    "rgb(255, 255, 255)",
+    "rgb(232, 215, 216)",
+    "rgb(132, 33, 38)",
+    "rgb(0, 0, 0)",
+    "rgb(204, 102, 102)"
+  ],
+  "docHeight": 753
+}

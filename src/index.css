@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+}
+
+@layer base {
+  :root {
+    --bg-bone: #FAF8F8;
+    --bg-cream: #EDE4E6;
+    --bg-card: #FFFFFF;
+    --bg-dark: #221316;
+    --bg-dark-surface: #2F171B;
+    --text-primary: #221316;
+    --text-muted: #644F53;
+    --accent-gold: #842126;
+    --accent-gold-light: #E08D93;
+    --accent-gold-soft: rgba(132, 33, 38, 0.12);
+    --border-subtle: rgba(34, 19, 22, 0.08);
+    --border-gold: rgba(132, 33, 38, 0.28);
+  }
+
+  body {
+    background-color: var(--bg-bone);
+    color: var(--text-primary);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Fraunces', 'Cormorant Garamond', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Refined Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #EDE4E6;
+}
+::-webkit-scrollbar-thumb {
+  background: #E08D93;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #842126;
+}
+
+/* Kinetic Marquee */
+@keyframes marqueeLeft {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marqueeLeft 32s linear infinite;
+}
+
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
+
+/* Luxury Card & Glass Tokens */
+.card-slobodian {
+  background: #FFFFFF;
+  border: 1px solid rgba(34, 19, 22, 0.08);
+  box-shadow: 0 4px 20px -4px rgba(34, 19, 22, 0.04);
+}
+
+.card-slobodian:hover {
+  border-color: rgba(132, 33, 38, 0.4);
+  box-shadow: 0 12px 32px -8px rgba(34, 19, 22, 0.08);
+}
+
+.card-dark-slobodian {
+  background: #221316;
+  border: 1px solid rgba(224, 141, 147, 0.16);
+  color: #FAF8F8;
+}
+
+.text-gold {
+  color: #842126;
+}
+
+.bg-gold {
+  background-color: #842126;
+}
+
+.border-gold {
+  border-color: #842126;
+}
