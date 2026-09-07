@@ -367,7 +367,7 @@ export default function ServicesSection() {
         className="relative overflow-hidden py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#EDE4E6] border-t border-[#842126]/[0.14]"
       >
         <div
-          className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+          className="absolute inset-x-0 top-0 h-[620px] sm:h-[680px] lg:h-[760px] pointer-events-none select-none overflow-hidden"
           style={{
             transform: "translateZ(0)",
             willChange: "transform",
@@ -382,7 +382,7 @@ export default function ServicesSection() {
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#EDE4E6]/85 via-[#EDE4E6]/70 to-[#EDE4E6]/90" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#EDE4E6]/85 via-[#EDE4E6]/70 to-[#EDE4E6]" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto">
@@ -414,7 +414,7 @@ export default function ServicesSection() {
         className="relative overflow-hidden py-16 sm:py-24 px-4 sm:px-6 lg:px-8 bg-[#FAF8F8] border-t border-[#842126]/[0.14]"
       >
         <div
-          className="absolute inset-0 pointer-events-none select-none overflow-hidden"
+          className="absolute inset-x-0 top-0 h-[620px] sm:h-[680px] lg:h-[760px] pointer-events-none select-none overflow-hidden"
           style={{
             transform: "translateZ(0)",
             willChange: "transform",
@@ -429,7 +429,7 @@ export default function ServicesSection() {
             loading="lazy"
             decoding="async"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F8]/75 via-[#FAF8F8]/45 to-[#FAF8F8]/80" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FAF8F8]/75 via-[#FAF8F8]/45 to-[#FAF8F8]" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto">
